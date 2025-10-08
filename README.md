@@ -1,14 +1,12 @@
 ---
 showHero: true
 title: Archipelago Project
-description: Mapping an emerging “island-chain” of places where people can live, visit or stay where a regenerative, second renaissance culture is seeding
+description: Mapping an emerging “island-chain” of places where a regenerative, second renaissance culture is seeding
 ---
 
 ## Purpose
 
-Listing **places** where people can **live, visit or stay** where a regenerative, second renaissance[^1] culture is seeding.
-
-“Archipelago” because this is an emerging chain of islands where this culture is surfacing.
+Listing **places** where people can **live, visit or stay** where a regenerative, second renaissance[^1] culture is emerging.
 
 [^1]: aka liminal web, metamodern, integral-ish etc
 
@@ -69,10 +67,6 @@ Each listing might include:
 ### Why call it an “Archipelago”?
 
 Because the metaphor fits: a chain of distinct yet related islands in a shared sea. Each is self-contained, yet together they form a geography — the visible shape of an emergent culture. (Also: yes, Ursula K. Le Guin’s *Earthsea* is a quiet inspiration.)
-
-[^1]: aka liminal web, metamodern, integral-ish etc
-
----
 
 ### 6. How can I contribute?
 
