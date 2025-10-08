@@ -1,6 +1,8 @@
 {
   "theme": "lessflowery",
+  "favicon": "/archipelago-logo.jpg",
   "nav": {
-    "title": "Archipelago"
+    "title": "Archipelago",
+    "logo": "/archipelago-logo.jpg"
   }
 }
