@@ -8,8 +8,10 @@ lng: -8.1339
 type: community / retreat
 rating: 9
 video: ""
-image: ""
+image: "https://screenshotit.app/www.eltilo.casa"
 ---
+
+![](https://screenshotit.app/www.eltilo.casa)
 
 - **Location:** Spain
 - **Type:** Community / Retreat

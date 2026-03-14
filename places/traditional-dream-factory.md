@@ -8,8 +8,10 @@ lng: -8.6833
 type: community / residency
 rating: 6
 video: "https://youtu.be/btBqOboLdOg?feature=shared"
-image: ""
+image: "https://screenshotit.app/traditionaldreamfactory.com"
 ---
+
+![](https://screenshotit.app/traditionaldreamfactory.com)
 
 - **Location:** Portugal
 - **Type:** Community / Residency

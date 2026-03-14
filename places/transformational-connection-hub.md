@@ -6,8 +6,10 @@ country: "Portugal"
 type: community hub
 rating: 6
 video: ""
-image: ""
+image: "https://screenshotit.app/www.transformationalconnection.com/transformational-connection-house-booking"
 ---
+
+![](https://screenshotit.app/www.transformationalconnection.com/transformational-connection-house-booking)
 
 - **Location:** Portugal
 - **Type:** Community Hub

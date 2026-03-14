@@ -8,8 +8,10 @@ lng: -115.2407
 type: retreat centre
 rating: 8
 video: "https://www.youtube.com/watch?v=HWrf_TW1Uis"
-image: ""
+image: "https://screenshotit.app/www.clearskycenter.org"
 ---
+
+![](https://screenshotit.app/www.clearskycenter.org)
 
 - **Location:** Canada
 - **Type:** Retreat Centre

@@ -8,8 +8,10 @@ lng: -92.4916
 type: intentional community
 rating: 4
 video: ""
-image: ""
+image: "https://screenshotit.app/www.bostonglobe.com/metro/2019/06/22/they-quit-petroleum-electricity-and-money-and-found-happiness/gbU91CTDP0vT1VqzdpbW1M/story.html"
 ---
+
+![](https://screenshotit.app/www.bostonglobe.com/metro/2019/06/22/they-quit-petroleum-electricity-and-money-and-found-happiness/gbU91CTDP0vT1VqzdpbW1M/story.html)
 
 - **Location:** Maine
 - **Type:** Intentional Community

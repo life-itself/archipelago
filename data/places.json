@@ -10,12 +10,12 @@
     "type": "retreat centre",
     "rating": 6,
     "video": "https://youtu.be/VvCHynMeIi4",
-    "image": ""
+    "image": "https://screenshotit.app/bluemorphotours.com"
   },
   {
     "id": "borderland",
     "title": "Borderland",
-    "url": "",
+    "url": "https://www.theborderland.se/",
     "location": "Sweden",
     "country": "Sweden",
     "lat": 58.8793,
@@ -23,7 +23,7 @@
     "type": "festival",
     "rating": 7,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/www.theborderland.se"
   },
   {
     "id": "brave-earth",
@@ -36,12 +36,12 @@
     "type": "healing community",
     "rating": 6,
     "video": "https://www.youtube.com/watch?v=NS-ayALqtyk",
-    "image": ""
+    "image": "https://screenshotit.app/www.braveearth.com"
   },
   {
     "id": "burning-man",
     "title": "Burning Man",
-    "url": "",
+    "url": "https://burningman.org",
     "location": "Nevada",
     "country": "USA",
     "lat": 40.7864,
@@ -49,7 +49,7 @@
     "type": "festival",
     "rating": 6,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/burningman.org"
   },
   {
     "id": "casa-tilo",
@@ -62,7 +62,7 @@
     "type": "community / retreat",
     "rating": 9,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/www.eltilo.casa"
   },
   {
     "id": "clear-sky-retreat-center",
@@ -75,7 +75,7 @@
     "type": "retreat centre",
     "rating": 8,
     "video": "https://www.youtube.com/watch?v=HWrf_TW1Uis",
-    "image": ""
+    "image": "https://screenshotit.app/www.clearskycenter.org"
   },
   {
     "id": "emerge-lakefront",
@@ -88,7 +88,7 @@
     "type": "community / gathering space",
     "rating": 10,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/emergelakefront.org"
   },
   {
     "id": "eterna",
@@ -101,7 +101,7 @@
     "type": "regenerative community",
     "rating": 5,
     "video": "https://www.instagram.com/eterna.earth?igsh=NWtreHE4bzgzdHly",
-    "image": ""
+    "image": "https://screenshotit.app/www.eterna.earth"
   },
   {
     "id": "feytopia",
@@ -114,7 +114,7 @@
     "type": "intentional community",
     "rating": 6,
     "video": "https://vimeo.com/497213736",
-    "image": ""
+    "image": "https://screenshotit.app/feytopia.com"
   },
   {
     "id": "fools-valley",
@@ -127,7 +127,7 @@
     "type": "community / land project",
     "rating": 5,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/foolsvalley.com"
   },
   {
     "id": "future-thinkers-smart-village",
@@ -140,12 +140,12 @@
     "type": "intentional community",
     "rating": 10,
     "video": "https://www.youtube.com/watch?v=gdvJFzGUs8Q",
-    "image": ""
+    "image": "https://screenshotit.app/futurethinkers.org/village"
   },
   {
     "id": "life-itself-riverside-hub",
     "title": "Life Itself Riverside Hub",
-    "url": "https://lifeitself.org/hubs/bergerac",
+    "url": "https://lifeitself.org/hubs/riverside",
     "location": "Bergerac, France",
     "country": "France",
     "lat": 44.8524,
@@ -153,7 +153,7 @@
     "type": "praxis hub / coliving",
     "rating": 10,
     "video": "https://www.youtube.com/watch?v=scL2WItX_Qo",
-    "image": ""
+    "image": "https://screenshotit.app/lifeitself.org/hubs/riverside"
   },
   {
     "id": "liminal-village",
@@ -166,7 +166,7 @@
     "type": "regenerative village",
     "rating": 7,
     "video": "https://www.youtube.com/watch?v=XdhPXocPf9g",
-    "image": ""
+    "image": "https://screenshotit.app/liminalvillage.com"
   },
   {
     "id": "monastic-academy",
@@ -179,7 +179,7 @@
     "type": "monastery",
     "rating": 8,
     "video": "https://www.youtube.com/watch?v=-0Tsg6SzK7Y",
-    "image": ""
+    "image": "https://screenshotit.app/www.monasticacademy.com"
   },
   {
     "id": "nuanu",
@@ -192,7 +192,7 @@
     "type": "creative city",
     "rating": 6,
     "video": "https://www.instagram.com/nuanu_city/?hl=en",
-    "image": ""
+    "image": "https://screenshotit.app/www.nuanu.com"
   },
   {
     "id": "possibility-alliance",
@@ -205,7 +205,7 @@
     "type": "intentional community",
     "rating": 4,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/www.bostonglobe.com/metro/2019/06/22/they-quit-petroleum-electricity-and-money-and-found-happiness/gbU91CTDP0vT1VqzdpbW1M/story.html"
   },
   {
     "id": "realisation-festival",
@@ -244,7 +244,7 @@
     "type": "intentional community",
     "rating": 3,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/www.tamera.org"
   },
   {
     "id": "the-alembic",
@@ -270,7 +270,7 @@
     "type": "regenerative community",
     "rating": 5,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/tierramor.cr"
   },
   {
     "id": "traditional-dream-factory",
@@ -283,7 +283,7 @@
     "type": "community / residency",
     "rating": 6,
     "video": "https://youtu.be/btBqOboLdOg?feature=shared",
-    "image": ""
+    "image": "https://screenshotit.app/traditionaldreamfactory.com"
   },
   {
     "id": "transformational-connection-hub",
@@ -294,6 +294,6 @@
     "type": "community hub",
     "rating": 6,
     "video": "",
-    "image": ""
+    "image": "https://screenshotit.app/www.transformationalconnection.com/transformational-connection-house-booking"
   }
 ]

@@ -8,8 +8,10 @@ lng: -72.4470
 type: monastery
 rating: 8
 video: "https://www.youtube.com/watch?v=-0Tsg6SzK7Y"
-image: ""
+image: "https://screenshotit.app/www.monasticacademy.com"
 ---
+
+![](https://screenshotit.app/www.monasticacademy.com)
 
 - **Location:** Vermont
 - **Type:** Monastery

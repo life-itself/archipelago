@@ -8,8 +8,10 @@ lng: -84.5235
 type: regenerative community
 rating: 5
 video: ""
-image: ""
+image: "https://screenshotit.app/tierramor.cr"
 ---
+
+![](https://screenshotit.app/tierramor.cr)
 
 - **Location:** Costa Rica
 - **Type:** Regenerative Community

@@ -8,8 +8,10 @@ lng: 14.1618
 type: community / gathering space
 rating: 10
 video: ""
-image: ""
+image: "https://screenshotit.app/emergelakefront.org"
 ---
+
+![](https://screenshotit.app/emergelakefront.org)
 
 - **Location:** Sweden
 - **Type:** Community / Gathering Space

@@ -26,8 +26,10 @@ lng: 0.0000          # optional, longitude
 type: community / residency   # free-text descriptive (not a fixed enum)
 rating: 7            # 1-10, Tucker's metamodern-center rating (not displayed publicly)
 video: ""            # optional YouTube/Vimeo URL
-image: ""            # filename in assets/images/ (leave empty if none yet)
+image: "https://screenshotit.app/example.com"  # screenshotit URL (see below)
 ---
+
+![](https://screenshotit.app/example.com)
 
 - **Location:** City/Region, Country
 - **Type:** Community / Residency
@@ -44,10 +46,29 @@ https://youtube.com/watch?v=VIDEO_ID
 
 The body follows a consistent layout:
 
-1. **Info card** — bullet list with Location, Type, and Website (plain URL, not a markdown link)
-2. **Back to map link** — `[← Back to the map](/map)`
-3. **Description** — free-text about the place
-4. **Video** — bare YouTube/Vimeo URL on its own line (Flowershow auto-embeds it)
+1. **Screenshot image** — `![](screenshotit-url)` (see Images section below)
+2. **Info card** — bullet list with Location, Type, and Website (plain URL, not a markdown link)
+3. **Back to map link** — `[← Back to the map](/map)`
+4. **Description** — free-text about the place
+5. **Video** — bare YouTube/Vimeo URL on its own line (Flowershow auto-embeds it)
+
+### Images
+
+We use [screenshotit.app](https://screenshotit.app/) to generate images from each place's website. The URL format is:
+
+```
+https://screenshotit.app/{domain-and-path}
+```
+
+Strip the protocol (`https://`) and any trailing slash. Examples:
+- `https://www.braveearth.com/` → `https://screenshotit.app/www.braveearth.com`
+- `https://futurethinkers.org/village/` → `https://screenshotit.app/futurethinkers.org/village`
+
+Set this URL in both:
+- The `image` frontmatter field
+- An `![](url)` on the first line of the body (before the info card)
+
+If a place has no website URL, leave `image` empty and omit the screenshot line.
 
 ### Notes on `type`
 

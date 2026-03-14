@@ -8,8 +8,10 @@ lng: 115.0867
 type: creative city
 rating: 6
 video: "https://www.instagram.com/nuanu_city/?hl=en"
-image: ""
+image: "https://screenshotit.app/www.nuanu.com"
 ---
+
+![](https://screenshotit.app/www.nuanu.com)
 
 - **Location:** Bali
 - **Type:** Creative City

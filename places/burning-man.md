@@ -1,6 +1,6 @@
 ---
 title: "Burning Man"
-url: ""
+url: "https://burningman.org"
 location: "Nevada"
 country: "USA"
 lat: 40.7864
@@ -8,11 +8,14 @@ lng: -119.2065
 type: festival
 rating: 6
 video: ""
-image: ""
+image: "https://screenshotit.app/burningman.org"
 ---
+
+![](https://screenshotit.app/burningman.org)
 
 - **Location:** Nevada
 - **Type:** Festival
+- **Website:** https://burningman.org
 
 [← Back to the map](/map)
 

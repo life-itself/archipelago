@@ -8,8 +8,10 @@ lng: -83.7350
 type: healing community
 rating: 6
 video: "https://www.youtube.com/watch?v=NS-ayALqtyk"
-image: ""
+image: "https://screenshotit.app/www.braveearth.com"
 ---
+
+![](https://screenshotit.app/www.braveearth.com)
 
 - **Location:** Costa Rica
 - **Type:** Healing Community

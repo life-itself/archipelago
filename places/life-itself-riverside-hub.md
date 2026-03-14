@@ -8,8 +8,10 @@ lng: 0.4850
 type: praxis hub / coliving
 rating: 10
 video: "https://www.youtube.com/watch?v=scL2WItX_Qo"
-image: ""
+image: "https://screenshotit.app/lifeitself.org/hubs/riverside"
 ---
+
+![](https://screenshotit.app/lifeitself.org/hubs/riverside)
 
 - **Location:** Bergerac, France
 - **Type:** Praxis Hub / Coliving

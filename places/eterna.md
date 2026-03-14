@@ -8,8 +8,10 @@ lng: -84.8384
 type: regenerative community
 rating: 5
 video: "https://www.instagram.com/eterna.earth?igsh=NWtreHE4bzgzdHly"
-image: ""
+image: "https://screenshotit.app/www.eterna.earth"
 ---
+
+![](https://screenshotit.app/www.eterna.earth)
 
 - **Location:** Costa Rica
 - **Type:** Regenerative Community

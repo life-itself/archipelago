@@ -8,8 +8,10 @@ lng: -9.1503
 type: community / land project
 rating: 5
 video: ""
-image: ""
+image: "https://screenshotit.app/foolsvalley.com"
 ---
+
+![](https://screenshotit.app/foolsvalley.com)
 
 - **Location:** Portugal
 - **Type:** Community / Land Project

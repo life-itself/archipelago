@@ -8,8 +8,10 @@ lng: -73.2516
 type: retreat centre
 rating: 6
 video: "https://youtu.be/VvCHynMeIi4"
-image: ""
+image: "https://screenshotit.app/bluemorphotours.com"
 ---
+
+![](https://screenshotit.app/bluemorphotours.com)
 
 - **Location:** Peru
 - **Type:** Retreat Centre

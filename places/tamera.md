@@ -8,8 +8,10 @@ lng: -8.2266
 type: intentional community
 rating: 3
 video: ""
-image: ""
+image: "https://screenshotit.app/www.tamera.org"
 ---
+
+![](https://screenshotit.app/www.tamera.org)
 
 - **Location:** Portugal
 - **Type:** Intentional Community

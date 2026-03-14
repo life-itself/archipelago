@@ -8,8 +8,10 @@ lng: -119.2730
 type: intentional community
 rating: 10
 video: "https://www.youtube.com/watch?v=gdvJFzGUs8Q"
-image: ""
+image: "https://screenshotit.app/futurethinkers.org/village"
 ---
+
+![](https://screenshotit.app/futurethinkers.org/village)
 
 - **Location:** Canada
 - **Type:** Intentional Community

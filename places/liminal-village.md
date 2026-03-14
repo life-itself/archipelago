@@ -8,8 +8,10 @@ lng: 11.2558
 type: regenerative village
 rating: 7
 video: "https://www.youtube.com/watch?v=XdhPXocPf9g"
-image: ""
+image: "https://screenshotit.app/liminalvillage.com"
 ---
+
+![](https://screenshotit.app/liminalvillage.com)
 
 - **Location:** Italy
 - **Type:** Regenerative Village
