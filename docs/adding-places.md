@@ -21,14 +21,47 @@ title: "Place Name"
 url: "https://example.com"
 location: "City/Region, Country"
 country: "Country"
-type: place        # one of: place | pop-up | event
-rating: 7          # 1-10, Tucker's metamodern-center rating (not displayed publicly)
-video: ""          # optional YouTube/Vimeo URL
-image: ""          # filename in assets/images/ (leave empty if none yet)
+lat: 0.0000          # optional, latitude
+lng: 0.0000          # optional, longitude
+type: community / residency   # free-text descriptive (not a fixed enum)
+rating: 7            # 1-10, Tucker's metamodern-center rating (not displayed publicly)
+video: ""            # optional YouTube/Vimeo URL
+image: ""            # filename in assets/images/ (leave empty if none yet)
 ---
 
-Free-text description of the place. Include ethos, vibe, what it's like to visit or stay. You can embed videos, add links, etc.
+- **Location:** City/Region, Country
+- **Type:** Community / Residency
+- **Website:** https://example.com
+
+[← Back to the map](/map)
+
+Free-text description of the place. Include ethos, vibe, what it's like to visit or stay.
+
+https://youtube.com/watch?v=VIDEO_ID
 ```
+
+### Page body structure
+
+The body follows a consistent layout:
+
+1. **Info card** — bullet list with Location, Type, and Website (plain URL, not a markdown link)
+2. **Back to map link** — `[← Back to the map](/map)`
+3. **Description** — free-text about the place
+4. **Video** — bare YouTube/Vimeo URL on its own line (Flowershow auto-embeds it)
+
+### Notes on `type`
+
+The `type` field is free-text descriptive, not a fixed enum. Use whatever best describes the place:
+- community / residency
+- retreat centre
+- intentional community
+- festival
+- pop-up gathering
+- monastery
+- regenerative community
+- etc.
+
+Keep it short and lowercase. This appears both in frontmatter and in the body info card.
 
 ## Step 2: Add an island to the map
 

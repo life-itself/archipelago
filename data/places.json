@@ -7,7 +7,7 @@
     "country": "France",
     "lat": 44.8524,
     "lng": 0.485,
-    "type": "place",
+    "type": "praxis hub / coliving",
     "rating": 10,
     "video": "https://www.youtube.com/watch?v=scL2WItX_Qo",
     "image": ""
@@ -20,7 +20,7 @@
     "country": "Peru",
     "lat": -3.7437,
     "lng": -73.2516,
-    "type": "place",
+    "type": "retreat centre",
     "rating": 6,
     "video": "https://youtu.be/VvCHynMeIi4",
     "image": ""
@@ -33,7 +33,7 @@
     "country": "Sweden",
     "lat": 58.8793,
     "lng": 16.2633,
-    "type": "event",
+    "type": "festival",
     "rating": 7,
     "video": "",
     "image": ""
@@ -46,7 +46,7 @@
     "country": "Costa Rica",
     "lat": 9.163,
     "lng": -83.735,
-    "type": "place",
+    "type": "healing community",
     "rating": 6,
     "video": "https://www.youtube.com/watch?v=NS-ayALqtyk",
     "image": ""
@@ -59,7 +59,7 @@
     "country": "USA",
     "lat": 40.7864,
     "lng": -119.2065,
-    "type": "event",
+    "type": "festival",
     "rating": 6,
     "video": "",
     "image": ""
@@ -72,7 +72,7 @@
     "country": "Spain",
     "lat": 42.5751,
     "lng": -8.1339,
-    "type": "place",
+    "type": "community / retreat",
     "rating": 9,
     "video": "",
     "image": ""
@@ -85,7 +85,7 @@
     "country": "Canada",
     "lat": 49.6156,
     "lng": -115.2407,
-    "type": "place",
+    "type": "retreat centre",
     "rating": 8,
     "video": "https://www.youtube.com/watch?v=HWrf_TW1Uis",
     "image": ""
@@ -98,7 +98,7 @@
     "country": "Sweden",
     "lat": 57.7826,
     "lng": 14.1618,
-    "type": "place",
+    "type": "community / gathering space",
     "rating": 10,
     "video": "",
     "image": ""
@@ -111,7 +111,7 @@
     "country": "Costa Rica",
     "lat": 9.9763,
     "lng": -84.8384,
-    "type": "place",
+    "type": "regenerative community",
     "rating": 5,
     "video": "https://www.instagram.com/eterna.earth?igsh=NWtreHE4bzgzdHly",
     "image": ""
@@ -124,7 +124,7 @@
     "country": "France",
     "lat": 44.9333,
     "lng": 2.4333,
-    "type": "place",
+    "type": "intentional community",
     "rating": 6,
     "video": "https://vimeo.com/497213736",
     "image": ""
@@ -137,7 +137,7 @@
     "country": "Portugal",
     "lat": 39.0193,
     "lng": -9.1503,
-    "type": "place",
+    "type": "community / land project",
     "rating": 5,
     "video": "",
     "image": ""
@@ -150,7 +150,7 @@
     "country": "Canada",
     "lat": 50.267,
     "lng": -119.273,
-    "type": "place",
+    "type": "intentional community",
     "rating": 10,
     "video": "https://www.youtube.com/watch?v=gdvJFzGUs8Q",
     "image": ""
@@ -163,7 +163,7 @@
     "country": "Italy",
     "lat": 43.7696,
     "lng": 11.2558,
-    "type": "place",
+    "type": "regenerative village",
     "rating": 7,
     "video": "https://www.youtube.com/watch?v=XdhPXocPf9g",
     "image": ""
@@ -176,7 +176,7 @@
     "country": "USA",
     "lat": 44.8017,
     "lng": -72.447,
-    "type": "place",
+    "type": "monastery",
     "rating": 8,
     "video": "https://www.youtube.com/watch?v=-0Tsg6SzK7Y",
     "image": ""
@@ -189,7 +189,7 @@
     "country": "Indonesia",
     "lat": -8.621,
     "lng": 115.0867,
-    "type": "place",
+    "type": "creative city",
     "rating": 6,
     "video": "https://www.instagram.com/nuanu_city/?hl=en",
     "image": ""
@@ -202,7 +202,7 @@
     "country": "USA",
     "lat": 40.0236,
     "lng": -92.4916,
-    "type": "place",
+    "type": "intentional community",
     "rating": 4,
     "video": "",
     "image": ""
@@ -215,7 +215,7 @@
     "country": "UK",
     "lat": 51.1051,
     "lng": -2.9262,
-    "type": "event",
+    "type": "festival",
     "rating": 8,
     "video": "",
     "image": ""
@@ -228,7 +228,7 @@
     "country": "USA",
     "lat": 43.707,
     "lng": -72.6448,
-    "type": "place",
+    "type": "retreat",
     "rating": 10,
     "video": "",
     "image": ""
@@ -241,7 +241,7 @@
     "country": "Portugal",
     "lat": 37.7435,
     "lng": -8.2266,
-    "type": "place",
+    "type": "intentional community",
     "rating": 3,
     "video": "",
     "image": ""
@@ -254,7 +254,7 @@
     "country": "USA",
     "lat": 37.7749,
     "lng": -122.4194,
-    "type": "place",
+    "type": "community / gathering space",
     "rating": 7,
     "video": "",
     "image": ""
@@ -267,7 +267,7 @@
     "country": "Costa Rica",
     "lat": 9.9516,
     "lng": -84.5235,
-    "type": "place",
+    "type": "regenerative community",
     "rating": 5,
     "video": "",
     "image": ""
@@ -280,7 +280,7 @@
     "country": "Portugal",
     "lat": 38.0167,
     "lng": -8.6833,
-    "type": "place",
+    "type": "community / residency",
     "rating": 6,
     "video": "https://youtu.be/btBqOboLdOg?feature=shared",
     "image": ""
@@ -291,7 +291,7 @@
     "url": "https://www.transformationalconnection.com/transformational-connection-house-booking",
     "location": "Portugal",
     "country": "Portugal",
-    "type": "place",
+    "type": "community hub",
     "rating": 6,
     "video": "",
     "image": ""

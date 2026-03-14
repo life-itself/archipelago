@@ -5,10 +5,15 @@ location: "California"
 country: "USA"
 lat: 37.7749
 lng: -122.4194
-type: place
+type: community / gathering space
 rating: 7
 video: ""
 image: ""
 ---
+
+- **Location:** California
+- **Type:** Community / Gathering Space
+
+[← Back to the map](/map)
 
 A community and gathering space in California.

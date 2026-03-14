@@ -5,10 +5,18 @@ location: "Canada"
 country: "Canada"
 lat: 50.2670
 lng: -119.2730
-type: place
+type: intentional community
 rating: 10
 video: "https://www.youtube.com/watch?v=gdvJFzGUs8Q"
 image: ""
 ---
 
+- **Location:** Canada
+- **Type:** Intentional Community
+- **Website:** https://futurethinkers.org/village/
+
+[← Back to the map](/map)
+
 An intentional community and smart village in Canada.
+
+https://www.youtube.com/watch?v=gdvJFzGUs8Q

@@ -5,10 +5,15 @@ location: "Vermont"
 country: "USA"
 lat: 43.7070
 lng: -72.6448
-type: place
+type: retreat
 rating: 10
 video: ""
 image: ""
 ---
+
+- **Location:** Vermont
+- **Type:** Retreat
+
+[← Back to the map](/map)
 
 A retreat space in Vermont.

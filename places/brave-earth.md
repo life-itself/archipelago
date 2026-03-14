@@ -5,10 +5,18 @@ location: "Costa Rica"
 country: "Costa Rica"
 lat: 9.1630
 lng: -83.7350
-type: place
+type: healing community
 rating: 6
 video: "https://www.youtube.com/watch?v=NS-ayALqtyk"
 image: ""
 ---
 
+- **Location:** Costa Rica
+- **Type:** Healing Community
+- **Website:** https://www.braveearth.com/
+
+[← Back to the map](/map)
+
 A healing and regenerative community in Costa Rica.
+
+https://www.youtube.com/watch?v=NS-ayALqtyk

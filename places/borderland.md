@@ -5,10 +5,15 @@ location: "Sweden"
 country: "Sweden"
 lat: 58.8793
 lng: 16.2633
-type: event
+type: festival
 rating: 7
 video: ""
 image: ""
 ---
+
+- **Location:** Sweden
+- **Type:** Festival
+
+[← Back to the map](/map)
 
 A participatory, co-created festival in Sweden.

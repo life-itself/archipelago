@@ -5,10 +5,18 @@ location: "Canada"
 country: "Canada"
 lat: 49.6156
 lng: -115.2407
-type: place
+type: retreat centre
 rating: 8
 video: "https://www.youtube.com/watch?v=HWrf_TW1Uis"
 image: ""
 ---
 
+- **Location:** Canada
+- **Type:** Retreat Centre
+- **Website:** https://www.clearskycenter.org/
+
+[← Back to the map](/map)
+
 A meditation and retreat centre in the Canadian Rockies.
+
+https://www.youtube.com/watch?v=HWrf_TW1Uis

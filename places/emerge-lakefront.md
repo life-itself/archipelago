@@ -5,10 +5,16 @@ location: "Sweden"
 country: "Sweden"
 lat: 57.7826
 lng: 14.1618
-type: place
+type: community / gathering space
 rating: 10
 video: ""
 image: ""
 ---
+
+- **Location:** Sweden
+- **Type:** Community / Gathering Space
+- **Website:** https://emergelakefront.org/
+
+[← Back to the map](/map)
 
 A metamodern gathering and community space in Sweden.
