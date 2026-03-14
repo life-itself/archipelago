@@ -3,6 +3,8 @@ title: "The Bergerac Praxis Hub & Farmhouse"
 url: "https://lifeitself.org/hubs/bergerac"
 location: "Bergerac, France"
 country: "France"
+lat: 44.8524
+lng: 0.4850
 type: place
 rating: 10
 video: "https://www.youtube.com/watch?v=scL2WItX_Qo"

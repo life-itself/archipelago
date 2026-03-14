@@ -18,13 +18,14 @@ const places = files.map(file => {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return null;
 
-  const frontmatter = {};
+    const frontmatter = {};
   match[1].split('\n').forEach(line => {
     const m = line.match(/^(\w+):\s*"?(.*?)"?\s*$/);
     if (m) {
       let value = m[2];
       // Parse numbers
-      if (/^\d+$/.test(value)) value = parseInt(value, 10);
+      if (/^-?\d+$/.test(value)) value = parseInt(value, 10);
+      else if (/^-?\d+\.\d+$/.test(value)) value = parseFloat(value);
       frontmatter[m[1]] = value;
     }
   });
