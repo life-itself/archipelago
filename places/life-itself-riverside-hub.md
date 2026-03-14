@@ -1,6 +1,6 @@
 ---
 title: "Life Itself Riverside Hub"
-url: "https://lifeitself.org/hubs/bergerac"
+url: "https://lifeitself.org/hubs/riverside"
 location: "Bergerac, France"
 country: "France"
 lat: 44.8524
