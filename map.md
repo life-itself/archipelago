@@ -1,6 +1,5 @@
 ---
 title: Archipelago Map
-layout: plain
 ---
 
 <style>
