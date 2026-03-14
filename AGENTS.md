@@ -5,7 +5,6 @@ Pages are generally created in markdown or markdown with html.
 ## Key references
 
 - `docs/adding-places.md` — **How to add a new place** to the directory and the bespoke map. Read this before adding or modifying places.
-- `docs/bespoke-map.md` — Design brief for the map aesthetic (Anna Atkins cyanotype style). Links to reference image collection and Met Museum source.
 - `docs/plans/2026-03-14-directory-and-map.md` — Implementation plan for the directory and map.
 
 ## Project structure
