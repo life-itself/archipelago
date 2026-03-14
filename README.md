@@ -4,10 +4,10 @@ title: Archipelago
 description: Mapping an emerging island-chain of places where a regenerative, second renaissance culture is seeding
 ---
 
-<div style="position: relative; margin: -2rem -1rem 2rem; overflow: hidden;">
+<div style={{position: "relative", margin: "-2rem -1rem 2rem", overflow: "hidden"}}>
   <a href="/map.html">
-    <img src="/assets/map-hero.png" alt="Archipelago Map" style="width: 100%; display: block; opacity: 0.9;" />
-    <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(10, 40, 60, 0.85); border: 1px solid rgba(232, 224, 208, 0.3); color: #e8e0d0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none;">
+    <img src="/assets/map-hero.png" alt="Archipelago Map" style={{width: "100%", display: "block", opacity: 0.9}} />
+    <div style={{position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)", background: "rgba(10, 40, 60, 0.85)", border: "1px solid rgba(232, 224, 208, 0.3)", color: "#e8e0d0", fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", padding: "0.8rem 2rem", borderRadius: "4px", textDecoration: "none"}}>
       Explore the Map
     </div>
   </a>
