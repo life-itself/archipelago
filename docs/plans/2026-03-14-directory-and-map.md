@@ -8,6 +8,11 @@
 
 **Tech Stack:** Markdown + YAML frontmatter, Node.js/Python script for JSON extraction, HTML + SVG + CSS for the map, vanilla JS for interactivity. Deployed via Flowershow (which supports standalone HTML pages and inline scripts).
 
+**Key references:**
+- `docs/bespoke-map.md` — design brief for the map aesthetic, links to the cosmos.so collection and Met Museum source
+- `assets/reference/arch-1.jpeg` and `assets/reference/arch2-cluster.jpeg` — Anna Atkins cyanotype prints used as visual reference
+- Source: public domain, from [Met Museum collection](https://www.metmuseum.org/art/collection/search/286656)
+
 ---
 
 ## Phase 1: Places Directory
@@ -198,7 +203,7 @@ At this point the directory is live on the site. Review and iterate if needed be
 
 ## Phase 2: Bespoke Cyanotype Map
 
-The centrepiece of the project. An "imaginal map" — not geographically accurate, but evocative. Each place is rendered as an organic, cyanotype-style island shape on a deep Prussian blue sea. The feel should match the Anna Atkins prints from the Met collection (see `docs/arch-1.jpeg` and `docs/arch2-cluster.jpeg`).
+The centrepiece of the project. An "imaginal map" — not geographically accurate, but evocative. Each place is rendered as an organic, cyanotype-style island shape on a deep Prussian blue sea. The feel should match the Anna Atkins prints from the Met collection (see `assets/reference/arch-1.jpeg` and `assets/reference/arch2-cluster.jpeg`).
 
 ### Design Principles
 
@@ -244,7 +249,7 @@ Create a standalone HTML page that:
 
 **Step 3: Iterate on the aesthetic**
 
-This is the most important step. Compare against `docs/arch-1.jpeg` and `docs/arch2-cluster.jpeg`. Adjust colours, blur, transparency, edge roughness until it feels right.
+This is the most important step. Compare against `assets/reference/arch-1.jpeg` and `assets/reference/arch2-cluster.jpeg`. Adjust colours, blur, transparency, edge roughness until it feels right.
 
 **Step 4: Scale to all 23 places**
 
