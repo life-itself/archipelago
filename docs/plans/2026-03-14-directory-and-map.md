@@ -15,9 +15,9 @@
 
 ---
 
-## Phase 1: Places Directory
+## Phase 1: Places Directory ✅
 
-### Task 1: Create directory structure
+### Task 1: Create directory structure ✅
 
 **Files:**
 - Create: `places/` directory
@@ -39,7 +39,7 @@ git commit -m "feat: add places and assets directory structure"
 
 ---
 
-### Task 2: Define the place template and create all place files
+### Task 2: Define the place template and create all place files ✅
 
 Each place gets a markdown file with this frontmatter schema:
 
@@ -116,7 +116,7 @@ git commit -m "feat: add all 23 place directory entries from initial list"
 
 ---
 
-### Task 3: Create a places index page
+### Task 3: Create a places index page ✅
 
 **Files:**
 - Create: `places/index.md`
@@ -144,7 +144,7 @@ git commit -m "feat: add places index page"
 
 ---
 
-### Task 4: Build a frontmatter-to-JSON extraction script
+### Task 4: Build a frontmatter-to-JSON extraction script ✅
 
 This script reads all `places/*.md` files, parses their YAML frontmatter, and outputs a `places.json` file that the map can consume.
 
@@ -201,7 +201,7 @@ At this point the directory is live on the site. Review and iterate if needed be
 
 ---
 
-## Phase 2: Bespoke Cyanotype Map
+## Phase 2: Bespoke Cyanotype Map ✅ (v1)
 
 The centrepiece of the project. An "imaginal map" — not geographically accurate, but evocative. Each place is rendered as an organic, cyanotype-style island shape on a deep Prussian blue sea. The feel should match the Anna Atkins prints from the Met collection (see `assets/reference/arch-1.jpeg` and `assets/reference/arch2-cluster.jpeg`).
 
@@ -222,7 +222,7 @@ The centrepiece of the project. An "imaginal map" — not geographically accurat
 
 The implementation task should explore these and pick whichever gets closest to the reference images.
 
-### Task 5: Build the bespoke map page
+### Task 5: Build the bespoke map page ✅
 
 **Files:**
 - Create: `map.md` (or `map.html` — Flowershow entry point)
@@ -273,43 +273,58 @@ git push
 
 ---
 
-### Task 6: Iterate on the map
+### Task 6: Iterate on the map (ongoing)
 
-Review the map, compare with reference images, and refine. This is intentionally open-ended — the map is the centrepiece and worth spending time on.
+Map v1 is built. Iterative refinements done so far:
+- Repositioned layout: Europe centre, Americas left, Asia right
+- Replaced simple oval blobs with unique organic SVG silhouettes (branching fronds, tendrils, fan shapes, coral forms)
+- Removed halo/glow effect and all blur — shapes render crisp with turbulence displacement only
+- Normalised island sizes (0.5–0.65 range)
+- Moved Nuanu closer to reduce dead space
 
-Areas to iterate:
-- Island shape variety and organic quality
-- Colour matching to the original prints
-- Typography and label placement
-- Overall composition and balance
+Still to explore:
+- Further shape refinement to get closer to Atkins originals
 - Mobile responsiveness
 - Loading performance
 
 ---
 
-## Phase 3: Process & Contributing Guide
+## Phase 3: Process & Contributing Guide ✅
 
-### Task 7: Write the "how to add a place" guide
+### Task 7: Write the "how to add a place" guide ✅
 
-**Files:**
-- Create: `docs/contributing.md`
+Written as `docs/adding-places.md` — covers place file creation, map island positioning/sizing/shaping (with coordinate ranges, shape design principles), JSON rebuild, and commit workflow. Also referenced from `AGENTS.md` for AI agent discoverability.
 
-Document:
-1. How to create a new place file (frontmatter schema, body format)
-2. How to add an image
-3. How to rebuild `places.json`
-4. How to add the place to the map (x,y position, island shape)
-5. Instructions formatted for AI assistants (so someone can paste the guide into Claude/ChatGPT and say "add this place")
-6. Instructions for human contributors (PR workflow)
+---
 
-**Step 1: Write the guide**
+## Phase 4: Place Pages & Homepage Integration
 
-**Step 2: Commit**
+### Task 8: Design place page layout
 
-```bash
-git add docs/contributing.md
-git commit -m "docs: add contributing guide for adding new places"
-```
+Each place file (`places/<slug>.md`) needs a nice presentation when rendered by Flowershow. Currently they're bare markdown with minimal body text.
+
+Design a good layout for individual place pages that shows:
+- Title and location prominently
+- Place image (when available, placeholder when not)
+- Type badge (place / pop-up / event)
+- Link to website
+- Embedded video (if available)
+- Description body text
+- Link back to the map
+
+This may require a custom Flowershow template/layout, or can be achieved with HTML embedded in the markdown files. Investigate what Flowershow supports for custom page layouts.
+
+### Task 9: Embed the map into the homepage
+
+The map is currently a standalone `map.html`. We want it integrated into the homepage — ideally as the hero/background section so visitors land on the archipelago.
+
+Options to explore:
+- **iframe embed**: Simplest — embed `map.html` in an iframe on the homepage. May have sizing/interaction issues.
+- **Inline SVG**: Move the map SVG and JS directly into `README.md` or a custom `index.html`. Most seamless but may conflict with Flowershow rendering.
+- **Custom HTML homepage**: Replace the Flowershow-rendered `README.md` with a bespoke `index.html` that has the map as the hero section, with the README content below. This gives full control.
+- **Flowershow custom component**: If Flowershow supports custom React components or HTML injection in the hero area.
+
+The custom HTML homepage is likely the cleanest path if Flowershow can serve it. The map SVG is self-contained and could sit in the hero with page content scrolling below.
 
 ---
 
