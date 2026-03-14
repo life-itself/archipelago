@@ -17,7 +17,7 @@ image: "https://screenshotit.app/feytopia.com"
 - **Type:** Intentional Community
 - **Website:** https://feytopia.com/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A creative and intentional community in France.
 

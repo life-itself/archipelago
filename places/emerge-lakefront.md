@@ -17,6 +17,6 @@ image: "https://screenshotit.app/emergelakefront.org"
 - **Type:** Community / Gathering Space
 - **Website:** https://emergelakefront.org/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A metamodern gathering and community space in Sweden.

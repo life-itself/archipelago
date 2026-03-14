@@ -17,6 +17,6 @@ image: "https://screenshotit.app/www.bostonglobe.com/metro/2019/06/22/they-quit-
 - **Type:** Intentional Community
 - **Website:** https://www.bostonglobe.com/metro/2019/06/22/they-quit-petroleum-electricity-and-money-and-found-happiness/gbU91CTDP0vT1VqzdpbW1M/story.html
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A radical simplicity community in Maine that has given up petroleum, electricity, and money.

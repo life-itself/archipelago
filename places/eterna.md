@@ -17,7 +17,7 @@ image: "https://screenshotit.app/www.eterna.earth"
 - **Type:** Regenerative Community
 - **Website:** https://www.eterna.earth/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A regenerative community in Costa Rica.
 

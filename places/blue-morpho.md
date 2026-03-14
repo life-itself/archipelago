@@ -17,7 +17,7 @@ image: "https://screenshotit.app/bluemorphotours.com"
 - **Type:** Retreat Centre
 - **Website:** https://bluemorphotours.com/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A retreat centre in the Peruvian Amazon.
 

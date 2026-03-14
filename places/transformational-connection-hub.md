@@ -15,6 +15,6 @@ image: "https://screenshotit.app/www.transformationalconnection.com/transformati
 - **Type:** Community Hub
 - **Website:** https://www.transformationalconnection.com/transformational-connection-house-booking
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A transformational community and connection space in Portugal.

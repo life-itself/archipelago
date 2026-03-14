@@ -14,6 +14,6 @@ image: ""
 - **Location:** California
 - **Type:** Community / Gathering Space
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A community and gathering space in California.

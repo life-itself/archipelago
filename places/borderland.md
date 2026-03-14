@@ -17,6 +17,6 @@ image: "https://screenshotit.app/www.theborderland.se"
 - **Type:** Festival
 - **Website:** https://www.theborderland.se/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A participatory, co-created festival in Sweden.

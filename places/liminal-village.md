@@ -17,7 +17,7 @@ image: "https://screenshotit.app/liminalvillage.com"
 - **Type:** Regenerative Village
 - **Website:** https://liminalvillage.com/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A regenerative village and community in Italy.
 

@@ -17,6 +17,6 @@ image: "https://screenshotit.app/www.eltilo.casa"
 - **Type:** Community / Retreat
 - **Website:** https://www.eltilo.casa
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A community and retreat space in Spain.

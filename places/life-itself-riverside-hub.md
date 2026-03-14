@@ -17,7 +17,7 @@ image: "https://screenshotit.app/lifeitself.org/hubs/riverside"
 - **Type:** Praxis Hub / Coliving
 - **Website:** https://lifeitself.org/hubs/bergerac
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 Life Itself's Riverside Hub in Bergerac, Dordogne, France. A space for conscious coliving, residencies, and practice.
 

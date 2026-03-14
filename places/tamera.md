@@ -17,6 +17,6 @@ image: "https://screenshotit.app/www.tamera.org"
 - **Type:** Intentional Community
 - **Website:** https://www.tamera.org
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A peace research village and intentional community in southern Portugal.

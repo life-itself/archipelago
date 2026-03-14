@@ -17,7 +17,7 @@ image: "https://screenshotit.app/www.clearskycenter.org"
 - **Type:** Retreat Centre
 - **Website:** https://www.clearskycenter.org/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A meditation and retreat centre in the Canadian Rockies.
 

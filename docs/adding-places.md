@@ -35,7 +35,7 @@ image: "https://screenshotit.app/example.com"  # screenshotit URL (see below)
 - **Type:** Community / Residency
 - **Website:** https://example.com
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 Free-text description of the place. Include ethos, vibe, what it's like to visit or stay.
 
@@ -48,7 +48,7 @@ The body follows a consistent layout:
 
 1. **Screenshot image** — `![](screenshotit-url)` (see Images section below)
 2. **Info card** — bullet list with Location, Type, and Website (plain URL, not a markdown link)
-3. **Back to map link** — `[← Back to the map](/map)`
+3. **Back to map link** — `[← Back to the map](/map.html)`
 4. **Description** — free-text about the place
 5. **Video** — bare YouTube/Vimeo URL on its own line (Flowershow auto-embeds it)
 

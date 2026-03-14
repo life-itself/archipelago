@@ -17,6 +17,6 @@ image: "https://screenshotit.app/foolsvalley.com"
 - **Type:** Community / Land Project
 - **Website:** https://foolsvalley.com
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A community and land project in Portugal.

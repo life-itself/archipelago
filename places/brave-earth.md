@@ -17,7 +17,7 @@ image: "https://screenshotit.app/www.braveearth.com"
 - **Type:** Healing Community
 - **Website:** https://www.braveearth.com/
 
-[← Back to the map](/map)
+[← Back to the map](/map.html)
 
 A healing and regenerative community in Costa Rica.
 
