@@ -184,112 +184,118 @@
 
 <script>
 const places = [
-  // Rough layout: scattered across the canvas like an island chain
-  // Loosely grouped by region but not geographic
-  // Format: { id, title, location, country, url, x, y, size, filter, paths }
+  // Layout: Europe centre, Americas left, Asia/Pacific right
+  // Sizes kept small and fairly uniform (0.5–0.7 range)
+  // Canvas is 1200x800
 
-  // === European cluster (center-left, upper) ===
-  { id: "bergerac-praxis-hub", title: "The Bergerac Praxis Hub", location: "France", url: "/places/bergerac-praxis-hub",
-    x: 380, y: 180, size: 1.3, filter: "island-texture",
-    paths: ["M0,-45 C15,-50 35,-30 40,-15 C45,5 30,20 25,40 C20,55 5,50 -10,45 C-25,40 -35,25 -40,10 C-45,-5 -30,-20 -20,-35 C-10,-45 -5,-48 0,-45"]
-  },
-  { id: "feytopia", title: "Feÿtopia", location: "France", url: "/places/feytopia",
-    x: 310, y: 290, size: 0.7, filter: "island-wispy",
-    paths: ["M0,-25 C10,-28 25,-15 20,0 C15,15 5,25 -5,20 C-15,15 -25,5 -20,-10 C-15,-20 -5,-28 0,-25"]
-  },
-  { id: "liminal-village", title: "Liminal Village", location: "Italy", url: "/places/liminal-village",
-    x: 480, y: 260, size: 0.85, filter: "island-texture-2",
-    paths: ["M0,-30 C12,-35 30,-20 28,-5 C26,15 15,30 0,28 C-15,25 -28,10 -25,-8 C-22,-22 -10,-32 0,-30"]
-  },
-  { id: "emerge-lakefront", title: "Emerge Lakefront", location: "Sweden", url: "/places/emerge-lakefront",
-    x: 520, y: 120, size: 1.1, filter: "island-texture-3",
-    paths: ["M-5,-40 C10,-45 25,-35 30,-20 C35,-5 40,15 30,30 C20,40 5,35 -10,25 C-20,15 -30,5 -28,-10 C-25,-25 -15,-38 -5,-40"]
-  },
-  { id: "borderland", title: "Borderland", location: "Sweden", url: "/places/borderland",
-    x: 570, y: 190, size: 0.6, filter: "island-wispy",
-    paths: ["M0,-20 C10,-22 18,-10 15,2 C12,14 3,20 -5,18 C-14,15 -18,5 -15,-8 C-12,-17 -5,-22 0,-20"]
-  },
-  { id: "realisation-festival", title: "The Realisation Festival", location: "UK", url: "/places/realisation-festival",
-    x: 240, y: 160, size: 0.75, filter: "island-texture-2",
-    paths: ["M0,-28 C14,-30 25,-15 22,2 C19,18 8,28 -5,25 C-18,22 -25,8 -22,-8 C-18,-22 -8,-30 0,-28"]
-  },
-  { id: "casa-tilo", title: "Casa Tilo", location: "Spain", url: "/places/casa-tilo",
-    x: 270, y: 380, size: 0.9, filter: "island-texture",
-    paths: ["M0,-32 C15,-35 28,-18 25,0 C22,18 10,30 -5,28 C-20,25 -30,10 -27,-8 C-24,-22 -10,-35 0,-32"]
-  },
+  // === Americas cluster (left side) ===
 
-  // === Portugal cluster (left, middle) ===
-  { id: "traditional-dream-factory", title: "Traditional Dream Factory", location: "Portugal", url: "/places/traditional-dream-factory",
-    x: 130, y: 350, size: 0.8, filter: "island-texture-3",
-    paths: ["M0,-28 C12,-32 25,-18 22,-2 C19,14 8,26 -3,24 C-16,22 -25,8 -22,-6 C-19,-18 -8,-30 0,-28"]
-  },
-  { id: "tamera", title: "Tamera", location: "Portugal", url: "/places/tamera",
-    x: 90, y: 430, size: 0.55, filter: "island-wispy",
-    paths: ["M0,-18 C8,-20 16,-10 14,0 C12,10 4,18 -4,15 C-12,12 -16,4 -14,-6 C-12,-14 -5,-20 0,-18"]
-  },
-  { id: "fools-valley", title: "Fools Valley", location: "Portugal", url: "/places/fools-valley",
-    x: 160, y: 460, size: 0.5, filter: "island-wispy",
-    paths: ["M0,-16 C8,-18 14,-8 12,2 C10,12 3,16 -4,14 C-11,12 -15,4 -12,-5 C-10,-13 -5,-18 0,-16"]
-  },
-  { id: "transformational-connection-hub", title: "Transformational Connection Hub", location: "Portugal", url: "/places/transformational-connection-hub",
-    x: 70, y: 510, size: 0.6, filter: "island-texture-2",
-    paths: ["M0,-20 C10,-22 20,-12 18,2 C15,14 5,20 -5,18 C-15,14 -20,4 -17,-8 C-14,-17 -6,-22 0,-20"]
-  },
-
-  // === Americas cluster (right side) ===
-  { id: "monastic-academy", title: "Monastic Academy", location: "Vermont", url: "/places/monastic-academy",
-    x: 780, y: 200, size: 1.0, filter: "island-texture",
-    paths: ["M-5,-38 C10,-42 28,-28 32,-12 C36,8 25,28 10,35 C-5,38 -20,28 -28,12 C-32,-2 -25,-25 -15,-35 C-10,-40 -5,-42 -5,-38"]
-  },
-  { id: "sky-meadow-retreat", title: "Sky Meadow Retreat", location: "Vermont", url: "/places/sky-meadow-retreat",
-    x: 830, y: 130, size: 0.7, filter: "island-texture-3",
-    paths: ["M0,-24 C10,-26 20,-15 18,0 C15,12 5,22 -5,20 C-15,16 -20,5 -18,-8 C-15,-18 -6,-26 0,-24"]
-  },
-  { id: "possibility-alliance", title: "Possibility Alliance", location: "Maine", url: "/places/possibility-alliance",
-    x: 880, y: 240, size: 0.5, filter: "island-wispy",
-    paths: ["M0,-16 C8,-18 15,-8 12,3 C9,13 2,16 -5,14 C-12,11 -15,3 -12,-6 C-9,-14 -4,-18 0,-16"]
-  },
-  { id: "the-alembic", title: "The Alembic", location: "California", url: "/places/the-alembic",
-    x: 950, y: 350, size: 0.75, filter: "island-texture-2",
-    paths: ["M0,-26 C12,-28 22,-14 20,2 C17,16 6,24 -5,22 C-16,18 -22,6 -20,-8 C-17,-20 -7,-28 0,-26"]
-  },
-  { id: "burning-man", title: "Burning Man", location: "Nevada", url: "/places/burning-man",
-    x: 1010, y: 280, size: 0.6, filter: "island-wispy",
-    paths: ["M0,-20 C10,-22 18,-10 15,3 C12,14 3,20 -5,17 C-14,14 -18,4 -15,-7 C-12,-16 -5,-22 0,-20"]
-  },
-
-  // === Central/South America cluster (lower right) ===
-  { id: "brave-earth", title: "Brave Earth", location: "Costa Rica", url: "/places/brave-earth",
-    x: 850, y: 480, size: 0.8, filter: "island-texture",
-    paths: ["M0,-28 C12,-30 24,-16 22,0 C19,14 8,26 -4,24 C-16,20 -24,8 -22,-6 C-19,-18 -8,-30 0,-28"]
-  },
-  { id: "eterna", title: "Eterna", location: "Costa Rica", url: "/places/eterna",
-    x: 910, y: 540, size: 0.6, filter: "island-wispy",
-    paths: ["M0,-20 C9,-22 18,-12 16,0 C14,12 5,18 -4,16 C-13,13 -18,4 -15,-7 C-12,-16 -5,-22 0,-20"]
-  },
-  { id: "tierramor", title: "Tierramor", location: "Costa Rica", url: "/places/tierramor",
-    x: 790, y: 560, size: 0.5, filter: "island-wispy",
-    paths: ["M0,-16 C7,-18 14,-8 12,2 C10,11 3,15 -4,13 C-11,10 -14,3 -12,-5 C-10,-13 -4,-18 0,-16"]
-  },
-  { id: "blue-morpho", title: "Blue Morpho", location: "Peru", url: "/places/blue-morpho",
-    x: 750, y: 630, size: 0.65, filter: "island-texture-3",
-    paths: ["M0,-22 C10,-24 20,-12 17,2 C14,14 5,22 -5,20 C-14,16 -20,5 -17,-8 C-14,-18 -6,-24 0,-22"]
-  },
-
-  // === Asia/Pacific (far right) ===
-  { id: "nuanu", title: "Nuanu", location: "Bali", url: "/places/nuanu",
-    x: 1100, y: 500, size: 0.8, filter: "island-texture-2",
-    paths: ["M0,-28 C14,-30 25,-15 22,2 C19,18 7,26 -5,24 C-17,20 -25,8 -22,-8 C-18,-22 -8,-30 0,-28"]
-  },
-
-  // === Canada (upper right) ===
+  // -- North America (upper left) --
   { id: "future-thinkers-smart-village", title: "Future Thinkers", location: "Canada", url: "/places/future-thinkers-smart-village",
-    x: 720, y: 80, size: 1.1, filter: "island-texture",
-    paths: ["M-5,-40 C12,-44 30,-28 35,-10 C38,10 28,30 12,38 C-5,42 -22,30 -30,12 C-35,-5 -28,-28 -18,-38 C-10,-44 -5,-45 -5,-40"]
+    x: 160, y: 140, size: 0.6, filter: "island-texture",
+    paths: ["M-5,-18 C8,-22 20,-14 22,-4 C24,8 16,18 6,20 C-6,22 -16,14 -20,4 C-22,-6 -16,-16 -5,-18"]
   },
   { id: "clear-sky-retreat-center", title: "Clear Sky Retreat", location: "Canada", url: "/places/clear-sky-retreat-center",
-    x: 660, y: 50, size: 0.65, filter: "island-texture-2",
-    paths: ["M0,-22 C10,-24 18,-12 16,2 C13,14 4,20 -5,18 C-14,14 -18,4 -16,-7 C-13,-17 -5,-24 0,-22"]
+    x: 100, y: 200, size: 0.55, filter: "island-texture-2",
+    paths: ["M0,-16 C8,-18 14,-8 12,2 C10,12 3,16 -4,14 C-11,12 -15,4 -12,-5 C-10,-13 -5,-18 0,-16"]
+  },
+  { id: "monastic-academy", title: "Monastic Academy", location: "Vermont", url: "/places/monastic-academy",
+    x: 230, y: 230, size: 0.6, filter: "island-texture-3",
+    paths: ["M-3,-18 C8,-20 18,-12 20,-2 C22,10 14,18 4,20 C-8,22 -18,12 -20,2 C-22,-8 -14,-16 -3,-18"]
+  },
+  { id: "sky-meadow-retreat", title: "Sky Meadow Retreat", location: "Vermont", url: "/places/sky-meadow-retreat",
+    x: 280, y: 170, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 14,-8 12,2 C10,10 3,14 -4,12 C-10,10 -14,3 -12,-5 C-10,-12 -4,-16 0,-14"]
+  },
+  { id: "possibility-alliance", title: "Possibility Alliance", location: "Maine", url: "/places/possibility-alliance",
+    x: 310, y: 120, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C6,-16 13,-8 11,2 C9,11 2,14 -4,12 C-10,10 -13,3 -11,-5 C-9,-12 -4,-16 0,-14"]
+  },
+  { id: "the-alembic", title: "The Alembic", location: "California", url: "/places/the-alembic",
+    x: 80, y: 320, size: 0.55, filter: "island-texture-2",
+    paths: ["M0,-16 C9,-18 16,-8 14,3 C12,13 4,17 -4,15 C-12,12 -16,4 -14,-6 C-12,-14 -5,-18 0,-16"]
+  },
+  { id: "burning-man", title: "Burning Man", location: "Nevada", url: "/places/burning-man",
+    x: 140, y: 370, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 13,-7 11,3 C9,12 2,14 -4,12 C-10,9 -13,2 -11,-5 C-9,-12 -4,-16 0,-14"]
+  },
+
+  // -- Central/South America (lower left) --
+  { id: "brave-earth", title: "Brave Earth", location: "Costa Rica", url: "/places/brave-earth",
+    x: 200, y: 440, size: 0.55, filter: "island-texture",
+    paths: ["M0,-16 C9,-18 16,-9 14,2 C12,12 4,17 -4,15 C-12,12 -16,4 -14,-6 C-12,-14 -5,-18 0,-16"]
+  },
+  { id: "eterna", title: "Eterna", location: "Costa Rica", url: "/places/eterna",
+    x: 250, y: 500, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 14,-7 12,3 C10,11 3,14 -4,12 C-10,10 -14,3 -12,-5 C-10,-12 -4,-16 0,-14"]
+  },
+  { id: "tierramor", title: "Tierramor", location: "Costa Rica", url: "/places/tierramor",
+    x: 150, y: 520, size: 0.5, filter: "island-texture-2",
+    paths: ["M0,-14 C6,-16 12,-7 10,3 C8,11 2,14 -4,12 C-9,10 -12,3 -10,-5 C-8,-12 -3,-16 0,-14"]
+  },
+  { id: "blue-morpho", title: "Blue Morpho", location: "Peru", url: "/places/blue-morpho",
+    x: 280, y: 580, size: 0.55, filter: "island-texture-3",
+    paths: ["M0,-16 C8,-18 15,-9 13,2 C11,12 4,16 -4,14 C-11,12 -15,4 -13,-5 C-11,-14 -5,-18 0,-16"]
+  },
+
+  // === European cluster (centre) ===
+
+  // -- UK & Scandinavia (upper centre) --
+  { id: "realisation-festival", title: "The Realisation Festival", location: "UK", url: "/places/realisation-festival",
+    x: 500, y: 150, size: 0.55, filter: "island-texture-2",
+    paths: ["M0,-16 C9,-18 16,-8 14,3 C12,13 4,17 -5,15 C-13,12 -16,4 -14,-6 C-12,-14 -5,-18 0,-16"]
+  },
+  { id: "emerge-lakefront", title: "Emerge Lakefront", location: "Sweden", url: "/places/emerge-lakefront",
+    x: 620, y: 120, size: 0.6, filter: "island-texture-3",
+    paths: ["M-3,-18 C8,-20 18,-12 20,-2 C22,10 14,18 4,20 C-8,22 -18,12 -20,2 C-22,-8 -14,-16 -3,-18"]
+  },
+  { id: "borderland", title: "Borderland", location: "Sweden", url: "/places/borderland",
+    x: 680, y: 180, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 13,-7 11,3 C9,11 2,14 -4,12 C-10,9 -13,2 -11,-5 C-9,-12 -4,-16 0,-14"]
+  },
+
+  // -- France (centre) --
+  { id: "bergerac-praxis-hub", title: "The Bergerac Praxis Hub", location: "France", url: "/places/bergerac-praxis-hub",
+    x: 550, y: 280, size: 0.65, filter: "island-texture",
+    paths: ["M0,-18 C10,-20 20,-12 18,-2 C16,10 8,18 -2,16 C-12,14 -20,6 -18,-4 C-16,-14 -6,-20 0,-18"]
+  },
+  { id: "feytopia", title: "Feÿtopia", location: "France", url: "/places/feytopia",
+    x: 490, y: 330, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 14,-8 12,2 C10,10 3,14 -4,12 C-10,10 -14,3 -12,-5 C-10,-12 -4,-16 0,-14"]
+  },
+
+  // -- Spain & Italy (centre-south) --
+  { id: "casa-tilo", title: "Casa Tilo", location: "Spain", url: "/places/casa-tilo",
+    x: 520, y: 410, size: 0.55, filter: "island-texture",
+    paths: ["M0,-16 C9,-18 16,-9 14,2 C12,12 4,16 -4,14 C-12,11 -16,3 -14,-6 C-12,-14 -5,-18 0,-16"]
+  },
+  { id: "liminal-village", title: "Liminal Village", location: "Italy", url: "/places/liminal-village",
+    x: 660, y: 320, size: 0.55, filter: "island-texture-2",
+    paths: ["M0,-16 C8,-18 16,-9 14,3 C12,13 4,17 -5,15 C-13,12 -16,4 -14,-6 C-12,-14 -5,-18 0,-16"]
+  },
+
+  // -- Portugal cluster (centre-south-west) --
+  { id: "traditional-dream-factory", title: "Traditional Dream Factory", location: "Portugal", url: "/places/traditional-dream-factory",
+    x: 430, y: 470, size: 0.55, filter: "island-texture-3",
+    paths: ["M0,-16 C8,-18 15,-9 13,2 C11,12 4,16 -4,14 C-11,12 -15,4 -13,-5 C-11,-14 -5,-18 0,-16"]
+  },
+  { id: "tamera", title: "Tamera", location: "Portugal", url: "/places/tamera",
+    x: 380, y: 530, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C6,-16 12,-7 10,3 C8,11 2,14 -4,12 C-9,10 -12,3 -10,-5 C-8,-12 -3,-16 0,-14"]
+  },
+  { id: "fools-valley", title: "Fools Valley", location: "Portugal", url: "/places/fools-valley",
+    x: 490, y: 540, size: 0.5, filter: "island-wispy",
+    paths: ["M0,-14 C7,-16 13,-7 11,3 C9,11 2,14 -4,12 C-10,9 -13,2 -11,-5 C-9,-12 -4,-16 0,-14"]
+  },
+  { id: "transformational-connection-hub", title: "Transformational Connection Hub", location: "Portugal", url: "/places/transformational-connection-hub",
+    x: 440, y: 600, size: 0.5, filter: "island-texture-2",
+    paths: ["M0,-14 C7,-16 14,-8 12,2 C10,10 3,14 -4,12 C-10,10 -14,3 -12,-5 C-10,-12 -4,-16 0,-14"]
+  },
+
+  // === Asia/Pacific (right side) ===
+  { id: "nuanu", title: "Nuanu", location: "Bali", url: "/places/nuanu",
+    x: 1050, y: 420, size: 0.55, filter: "island-texture-2",
+    paths: ["M0,-16 C9,-18 16,-9 14,3 C12,13 4,17 -5,15 C-13,12 -16,4 -14,-6 C-12,-14 -5,-18 0,-16"]
   },
 ];
 
@@ -321,14 +327,14 @@ places.forEach((place, i) => {
   const labelBg = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   labelBg.setAttribute('class', 'island-label-bg');
   labelBg.setAttribute('x', place.x);
-  labelBg.setAttribute('y', place.y + 50 * place.size + 14);
+  labelBg.setAttribute('y', place.y + 22 * place.size + 12);
   labelBg.textContent = place.title;
   islandsGroup.appendChild(labelBg);
 
   const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
   label.setAttribute('class', 'island-label');
   label.setAttribute('x', place.x);
-  label.setAttribute('y', place.y + 50 * place.size + 14);
+  label.setAttribute('y', place.y + 22 * place.size + 12);
   label.textContent = place.title;
   islandsGroup.appendChild(label);
 
