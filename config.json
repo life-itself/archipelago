@@ -3,6 +3,10 @@
   "favicon": "/archipelago-logo.jpg",
   "nav": {
     "title": "Archipelago",
-    "logo": "/archipelago-logo.jpg"
+    "logo": "/archipelago-logo.jpg",
+    "links": [
+      { "name": "Map", "href": "/map.html" },
+      { "name": "Places", "href": "/places" }
+    ]
   }
 }
