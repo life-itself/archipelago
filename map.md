@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Archipelago Map</title>
+---
+title: Archipelago Map
+---
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
@@ -104,8 +102,6 @@
     background-size: 256px 256px;
   }
 </style>
-</head>
-<body>
 
 <div class="map-container">
   <svg id="map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
@@ -429,6 +425,3 @@ places.forEach((place, i) => {
   });
 });
 </script>
-
-</body>
-</html>
