@@ -1,5 +1,5 @@
 ---
-title: "The Bergerac Praxis Hub & Farmhouse"
+title: "Life Itself Riverside Hub"
 url: "https://lifeitself.org/hubs/bergerac"
 location: "Bergerac, France"
 country: "France"
@@ -17,6 +17,6 @@ image: ""
 
 [← Back to the map](/map)
 
-Life Itself's praxis hub in Bergerac and nearby farmhouse in the Dordogne, France. A space for conscious coliving, residencies, and practice.
+Life Itself's Riverside Hub in Bergerac, Dordogne, France. A space for conscious coliving, residencies, and practice.
 
 https://www.youtube.com/watch?v=scL2WItX_Qo

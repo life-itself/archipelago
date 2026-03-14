@@ -74,7 +74,7 @@ Note: `image` is left empty for now — we don't have images for any places yet.
 - `places/blue-morpho.md`
 - `places/possibility-alliance.md`
 - `places/liminal-village.md`
-- `places/bergerac-praxis-hub.md`
+- `places/life-itself-riverside-hub.md`
 - `places/burning-man.md`
 - `places/borderland.md`
 - `places/tamera.md`
