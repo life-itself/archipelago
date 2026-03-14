@@ -1,5 +1,6 @@
 ---
 showHero: true
+syntaxMode: mdx
 title: Archipelago
 description: Mapping an emerging island-chain of places where a regenerative, second renaissance culture is seeding
 ---
