@@ -34,7 +34,7 @@ Listing **places** where people can **live, visit or stay** where a regenerative
 
 ### 0. Who's involved
 
-This is currently a collaboration of Tucker Walsh, Life Itself (led by Rufus Pollock), Marin Petrov, and [Coliven](https://coliven.com).
+This is currently a collaboration of [Tucker Walsh](https://tuckerwalsh.substack.com), [Life Itself](https://lifeitself.org/) (led by [Rufus Pollock](https://rufuspollock.com/)), Marin Petrov, and [Coliven](https://coliven.com).
 
 ### What are we listing?
 
