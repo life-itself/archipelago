@@ -256,4 +256,4 @@ image: https://screenshotit.app/archipelago.place@social
   </div>
 </div>
 
-<script src="/assets/archipelago-map.js"></script>
+<script src="/assets/archipelago-map.js" defer></script>
