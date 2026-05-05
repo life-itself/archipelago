@@ -1,7 +1,7 @@
 ---
 layout: plain
 title: Archipelago of Renaissance
-description: Mapping an emerging island-chain of places where a regenerative, second renaissance culture is seeding
+description: "Mapping an emerging island-chain of places where a regenerative, second renaissance culture is seeding"
 image: https://screenshotit.app/archipelago.place@social
 ---
 
