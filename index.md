@@ -205,7 +205,7 @@ image: https://screenshotit.app/archipelago.place@social
     <h1>Archipelago</h1>
     <p>Mapping a regenerative, second renaissance culture</p>
   </div>
-  <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;"></svg>
+  <svg id="archipelago-map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;"></svg>
   <div class="map-grain-overlay"></div>
   <div class="map-scroll-hint">scroll to explore &nbsp;↓</div>
 </div>

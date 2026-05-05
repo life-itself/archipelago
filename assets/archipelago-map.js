@@ -170,7 +170,7 @@ const archipelagoPlaces = [
 ];
 
 (function() {
-  const svg = document.querySelector('#map-hero svg');
+  const svg = document.getElementById('archipelago-map');
   if (!svg) return;
 
   const NS = 'http://www.w3.org/2000/svg';
