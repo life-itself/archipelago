@@ -434,8 +434,8 @@ const archipelagoPlaces = [
   archipelagoPlaces.forEach((place) => {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     g.setAttribute('class', 'island-group');
-    g.setAttribute('transform', `translate(${place.x}, ${place.y}) scale(${place.size})`);
-    g.setAttribute('filter', `url(#${place.filter})`);
+    g.setAttribute('transform', 'translate(' + place.x + ', ' + place.y + ') scale(' + place.size + ')');
+    g.setAttribute('filter', 'url(#' + place.filter + ')');
     g.dataset.id = place.id;
 
     place.paths.forEach(d => {
