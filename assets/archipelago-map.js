@@ -170,8 +170,12 @@ const archipelagoPlaces = [
 ];
 
 (function() {
-  const islandsGroup = document.getElementById('archipelago-islands');
-  const tooltip = document.getElementById('archipelago-tooltip');
+  const svg = document.querySelector('#map-hero svg');
+  if (!svg) return;
+  const islandsGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  svg.appendChild(islandsGroup);
+
+  const tooltip = document.getElementById('archipelago-tooltip') || document.querySelector('.map-tooltip');
   const tooltipName = tooltip.querySelector('.place-name');
   const tooltipLocation = tooltip.querySelector('.place-location');
 

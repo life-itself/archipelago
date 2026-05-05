@@ -231,7 +231,6 @@ image: https://screenshotit.app/archipelago.place@social
     </defs>
 
     <rect width="1200" height="800" fill="url(#bg-gradient)"/>
-    <g id="archipelago-islands"></g>
   </svg>
 
   <div class="map-grain-overlay"></div>
