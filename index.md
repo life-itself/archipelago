@@ -206,32 +206,7 @@ image: https://screenshotit.app/archipelago.place@social
     <p>Mapping a regenerative, second renaissance culture</p>
   </div>
 
-  <svg id="archipelago-map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <filter id="island-texture" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="1" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="25" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-      <filter id="island-texture-2" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="42" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-      <filter id="island-texture-3" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="5" seed="99" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-      <filter id="island-wispy" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="7" result="noise"/>
-        <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-      <radialGradient id="bg-gradient" cx="50%" cy="50%" r="70%">
-        <stop offset="0%" stop-color="#1e6390"/>
-        <stop offset="100%" stop-color="#14405c"/>
-      </radialGradient>
-    </defs>
-
-    <rect width="1200" height="800" fill="url(#bg-gradient)"/>
-  </svg>
+  <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;"></svg>
 
   <div class="map-grain-overlay"></div>
   <div class="map-scroll-hint">scroll to explore &nbsp;↓</div>

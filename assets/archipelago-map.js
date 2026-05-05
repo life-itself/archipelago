@@ -172,7 +172,46 @@ const archipelagoPlaces = [
 (function() {
   const svg = document.querySelector('#map-hero svg');
   if (!svg) return;
-  const islandsGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+
+  const NS = 'http://www.w3.org/2000/svg';
+
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS(NS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+
+  // Inject defs: filters + gradient
+  var defs = svgEl('defs', {});
+
+  var filters = [
+    { id: 'island-texture',   freq: '0.015', octaves: '4', seed: '1',  scale: '25' },
+    { id: 'island-texture-2', freq: '0.018', octaves: '3', seed: '42', scale: '20' },
+    { id: 'island-texture-3', freq: '0.012', octaves: '5', seed: '99', scale: '30' },
+    { id: 'island-wispy',     freq: '0.025', octaves: '3', seed: '7',  scale: '15' },
+  ];
+  filters.forEach(function(f) {
+    var filter = svgEl('filter', { id: f.id, x: '-50%', y: '-50%', width: '200%', height: '200%' });
+    var turb = svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: f.freq, numOctaves: f.octaves, seed: f.seed, result: 'noise' });
+    var disp = svgEl('feDisplacementMap', { in: 'SourceGraphic', in2: 'noise', scale: f.scale, xChannelSelector: 'R', yChannelSelector: 'G' });
+    filter.appendChild(turb);
+    filter.appendChild(disp);
+    defs.appendChild(filter);
+  });
+
+  var grad = svgEl('radialGradient', { id: 'bg-gradient', cx: '50%', cy: '50%', r: '70%' });
+  var stop1 = svgEl('stop', { offset: '0%',   'stop-color': '#1e6390' });
+  var stop2 = svgEl('stop', { offset: '100%', 'stop-color': '#14405c' });
+  grad.appendChild(stop1);
+  grad.appendChild(stop2);
+  defs.appendChild(grad);
+  svg.appendChild(defs);
+
+  // Background rect
+  svg.appendChild(svgEl('rect', { width: '1200', height: '800', fill: 'url(#bg-gradient)' }));
+
+  // Islands group
+  var islandsGroup = svgEl('g', {});
   svg.appendChild(islandsGroup);
 
   const tooltip = document.getElementById('archipelago-tooltip') || document.querySelector('.map-tooltip');
