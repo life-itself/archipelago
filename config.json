@@ -5,8 +5,8 @@
     "title": "Archipelago",
     "logo": "/archipelago-logo.jpg",
     "links": [
-      { "name": "Map", "href": "/map.html" },
-      { "name": "Places", "href": "/places" }
+      { "name": "Places", "href": "/places" },
+      { "name": "About", "href": "/about" }
     ]
   }
 }
