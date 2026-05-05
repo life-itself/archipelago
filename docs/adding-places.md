@@ -7,7 +7,7 @@ Instructions for adding a new place to the directory and the bespoke map.
 Adding a place involves two things:
 
 1. **Create a place markdown file** in `places/` with structured frontmatter
-2. **Add an island entry** to the `places` array in `map.html`
+2. **Add an island entry** to the `archipelagoPlaces` array in `index.md`
 
 Then rebuild the JSON data file.
 
@@ -35,7 +35,7 @@ image: "https://screenshotit.app/example.com"  # screenshotit URL (see below)
 - **Type:** Community / Residency
 - **Website:** https://example.com
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 Free-text description of the place. Include ethos, vibe, what it's like to visit or stay.
 
@@ -48,7 +48,7 @@ The body follows a consistent layout:
 
 1. **Screenshot image** — `![](screenshotit-url)` (see Images section below)
 2. **Info card** — bullet list with Location, Type, and Website (plain URL, not a markdown link)
-3. **Back to map link** — `[← Back to the map](/map.html)`
+3. **Back to map link** — `[← Back to the map](/)`
 4. **Description** — free-text about the place
 5. **Video** — bare YouTube/Vimeo URL on its own line (Flowershow auto-embeds it)
 
@@ -86,7 +86,7 @@ Keep it short and lowercase. This appears both in frontmatter and in the body in
 
 ## Step 2: Add an island to the map
 
-Edit `map.html` and add an entry to the `places` array in the `<script>` section. Each entry looks like this:
+Edit `index.md` and add an entry to the `archipelagoPlaces` array in the `<script>` section. Each entry looks like this:
 
 ```javascript
 { id: "place-slug", title: "Display Name", location: "Country/Region", url: "/places/place-slug",
@@ -180,6 +180,6 @@ This reads all `places/*.md` frontmatter and outputs JSON used by other consumer
 ## Step 4: Commit
 
 ```bash
-git add places/<slug>.md map.html data/places.json
+git add places/<slug>.md index.md data/places.json
 git commit -m "feat: add <Place Name> to directory and map"
 ```

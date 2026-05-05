@@ -14,6 +14,6 @@ image: ""
 - **Location:** Vermont
 - **Type:** Retreat
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 A retreat space in Vermont.

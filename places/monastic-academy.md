@@ -17,7 +17,7 @@ image: "https://screenshotit.app/www.monasticacademy.com"
 - **Type:** Monastery
 - **Website:** https://www.monasticacademy.com/
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 A contemplative training monastery in Vermont.
 

@@ -17,6 +17,6 @@ image: "https://screenshotit.app/burningman.org"
 - **Type:** Festival
 - **Website:** https://burningman.org
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 The annual gathering in the Black Rock Desert, Nevada.

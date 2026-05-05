@@ -4,7 +4,7 @@ title: Places
 
 The islands of the archipelago — places where a regenerative, second renaissance culture is emerging.
 
-[View the map](/map.html)
+[View the map](/)
 
 | Place | Location | Type |
 |-------|----------|------|

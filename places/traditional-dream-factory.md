@@ -17,7 +17,7 @@ image: "https://screenshotit.app/traditionaldreamfactory.com"
 - **Type:** Community / Residency
 - **Website:** https://traditionaldreamfactory.com/
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 A community and residency space in Portugal.
 

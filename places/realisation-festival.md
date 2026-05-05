@@ -14,6 +14,6 @@ image: ""
 - **Location:** UK
 - **Type:** Festival
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 A festival in the UK exploring consciousness, practice, and cultural emergence.

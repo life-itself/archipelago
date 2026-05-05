@@ -17,7 +17,7 @@ image: "https://screenshotit.app/futurethinkers.org/village"
 - **Type:** Intentional Community
 - **Website:** https://futurethinkers.org/village/
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 An intentional community and smart village in Canada.
 

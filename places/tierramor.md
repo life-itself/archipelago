@@ -17,6 +17,6 @@ image: "https://screenshotit.app/tierramor.cr"
 - **Type:** Regenerative Community
 - **Website:** https://tierramor.cr
 
-[← Back to the map](/map.html)
+[← Back to the map](/)
 
 A regenerative community in Costa Rica.
