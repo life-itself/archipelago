@@ -9,78 +9,25 @@ image: https://screenshotit.app/archipelago.place@social
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    --archipelago-nav-offset: 4rem;
+  }
+
   #map-hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 4rem);
-    min-height: 500px;
+    height: calc(100vh - var(--archipelago-nav-offset));
+    height: calc(100svh - var(--archipelago-nav-offset));
+    min-height: clamp(500px, 72svh, 920px);
     background: #14405c;
     overflow: hidden;
   }
 
-  #map-hero svg {
+  #map-hero iframe {
     width: 100%;
     height: 100%;
-  }
-
-  .island-group {
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-  }
-
-  .island-group:hover {
-    opacity: 0.85;
-  }
-
-  .island-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 13px;
-    fill: #e8e0d0;
-    opacity: 0.85;
-    pointer-events: none;
-    text-anchor: middle;
-  }
-
-  .island-label-bg {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 13px;
-    fill: none;
-    stroke: #1a5276;
-    stroke-width: 3;
-    pointer-events: none;
-    text-anchor: middle;
-  }
-
-  .map-tooltip {
-    position: fixed;
-    background: rgba(10, 40, 60, 0.9);
-    border: 1px solid rgba(232, 224, 208, 0.3);
-    color: #e8e0d0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    padding: 10px 16px;
-    border-radius: 4px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    z-index: 1000;
-    max-width: 250px;
-  }
-
-  .map-tooltip.visible { opacity: 1; }
-
-  .map-tooltip .place-name {
-    font-weight: 400;
-    font-size: 17px;
-    margin-bottom: 4px;
-  }
-
-  .map-tooltip .place-location {
-    font-style: italic;
-    font-weight: 300;
-    opacity: 0.7;
+    border: 0;
+    display: block;
   }
 
   .map-grain-overlay {
@@ -137,8 +84,6 @@ image: https://screenshotit.app/archipelago.place@social
     letter-spacing: 0.08em;
     white-space: nowrap;
   }
-
-  /* About section */
   .about-section {
     background: #f5f0e8;
     padding: 5rem 2rem;
@@ -198,21 +143,57 @@ image: https://screenshotit.app/archipelago.place@social
   .about-links a:hover {
     border-color: #14405c;
   }
+
+  @supports (height: 100dvh) {
+    #map-hero {
+      height: calc(100dvh - var(--archipelago-nav-offset));
+      min-height: clamp(500px, 72dvh, 920px);
+    }
+  }
+
+  @media (max-width: 800px) {
+    :root {
+      --archipelago-nav-offset: 3.5rem;
+    }
+
+    #map-hero {
+      min-height: clamp(460px, 78svh, 760px);
+    }
+
+    .map-title-overlay {
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    .map-title-overlay h1 {
+      font-size: clamp(2.25rem, 10vw, 3rem);
+      letter-spacing: 0.06em;
+    }
+
+    .map-title-overlay p {
+      font-size: 0.95rem;
+      max-width: 18rem;
+    }
+
+    .map-scroll-hint {
+      bottom: 1rem;
+      font-size: 0.75rem;
+    }
+
+    .about-section {
+      padding: 3.5rem 1.25rem;
+    }
+
+    .about-inner p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+  }
 </style>
 
 <div id="map-hero">
-  <div class="map-title-overlay">
-    <h1>Archipelago</h1>
-    <p>Mapping a regenerative, second renaissance culture</p>
-  </div>
-  <svg id="archipelago-map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;"></svg>
-  <div class="map-grain-overlay"></div>
-  <div class="map-scroll-hint">scroll to explore &nbsp;↓</div>
-</div>
-
-<div class="map-tooltip" id="archipelago-tooltip">
-  <div class="place-name"></div>
-  <div class="place-location"></div>
+  <iframe src="/map.html" title="Archipelago map" loading="eager" referrerpolicy="no-referrer" scrolling="no"></iframe>
 </div>
 
 <div class="about-section">
@@ -227,5 +208,3 @@ image: https://screenshotit.app/archipelago.place@social
     </div>
   </div>
 </div>
-
-<script src="/assets/archipelago-map.js" defer></script>

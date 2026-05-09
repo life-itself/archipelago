@@ -173,10 +173,8 @@ const archipelagoPlaces = [
   // Must use getElementById, not querySelector('#map-hero svg').
   // Flowershow injects anchor-link SVGs into headings (class="w-5 h-5") which
   // appear earlier in the DOM and would be matched first by the generic selector.
-  const svg = document.getElementById('archipelago-map');
-  if (!svg) return;
-
   const NS = 'http://www.w3.org/2000/svg';
+  const STATE_KEY = '__archipelagoMapObserver';
 
   function svgEl(tag, attrs) {
     var el = document.createElementNS(NS, tag);
@@ -184,91 +182,124 @@ const archipelagoPlaces = [
     return el;
   }
 
-  // Inject defs: filters + gradient
-  var defs = svgEl('defs', {});
+  function initMap() {
+    const svg = document.getElementById('archipelago-map');
+    if (!svg || svg.dataset.archipelagoInitialized === 'true') return false;
+    const tooltip = document.getElementById('archipelago-tooltip') || document.querySelector('.map-tooltip');
+    if (!tooltip) return false;
 
-  var filters = [
-    { id: 'island-texture',   freq: '0.015', octaves: '4', seed: '1',  scale: '25' },
-    { id: 'island-texture-2', freq: '0.018', octaves: '3', seed: '42', scale: '20' },
-    { id: 'island-texture-3', freq: '0.012', octaves: '5', seed: '99', scale: '30' },
-    { id: 'island-wispy',     freq: '0.025', octaves: '3', seed: '7',  scale: '15' },
-  ];
-  filters.forEach(function(f) {
-    var filter = svgEl('filter', { id: f.id, x: '-50%', y: '-50%', width: '200%', height: '200%' });
-    var turb = svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: f.freq, numOctaves: f.octaves, seed: f.seed, result: 'noise' });
-    var disp = svgEl('feDisplacementMap', { in: 'SourceGraphic', in2: 'noise', scale: f.scale, xChannelSelector: 'R', yChannelSelector: 'G' });
-    filter.appendChild(turb);
-    filter.appendChild(disp);
-    defs.appendChild(filter);
-  });
+    svg.dataset.archipelagoInitialized = 'true';
 
-  var grad = svgEl('radialGradient', { id: 'bg-gradient', cx: '50%', cy: '50%', r: '70%' });
-  var stop1 = svgEl('stop', { offset: '0%',   'stop-color': '#1e6390' });
-  var stop2 = svgEl('stop', { offset: '100%', 'stop-color': '#14405c' });
-  grad.appendChild(stop1);
-  grad.appendChild(stop2);
-  defs.appendChild(grad);
-  svg.appendChild(defs);
+    // Clear any leftover children if this SVG was preserved across a route swap.
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
 
-  // Background rect
-  svg.appendChild(svgEl('rect', { width: '1200', height: '800', fill: 'url(#bg-gradient)' }));
+    // Inject defs: filters + gradient
+    var defs = svgEl('defs', {});
 
-  // Islands group
-  var islandsGroup = svgEl('g', {});
-  svg.appendChild(islandsGroup);
-
-  const tooltip = document.getElementById('archipelago-tooltip') || document.querySelector('.map-tooltip');
-  const tooltipName = tooltip.querySelector('.place-name');
-  const tooltipLocation = tooltip.querySelector('.place-location');
-
-  archipelagoPlaces.forEach((place) => {
-    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    g.setAttribute('class', 'island-group');
-    g.setAttribute('transform', 'translate(' + place.x + ', ' + place.y + ') scale(' + place.size + ')');
-    g.setAttribute('filter', 'url(#' + place.filter + ')');
-    g.dataset.id = place.id;
-
-    place.paths.forEach(d => {
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', d);
-      path.setAttribute('fill', '#e8dfd0');
-      path.setAttribute('opacity', '0.88');
-      g.appendChild(path);
+    var filters = [
+      { id: 'island-texture',   freq: '0.015', octaves: '4', seed: '1',  scale: '25' },
+      { id: 'island-texture-2', freq: '0.018', octaves: '3', seed: '42', scale: '20' },
+      { id: 'island-texture-3', freq: '0.012', octaves: '5', seed: '99', scale: '30' },
+      { id: 'island-wispy',     freq: '0.025', octaves: '3', seed: '7',  scale: '15' },
+    ];
+    filters.forEach(function(f) {
+      var filter = svgEl('filter', { id: f.id, x: '-50%', y: '-50%', width: '200%', height: '200%' });
+      var turb = svgEl('feTurbulence', { type: 'fractalNoise', baseFrequency: f.freq, numOctaves: f.octaves, seed: f.seed, result: 'noise' });
+      var disp = svgEl('feDisplacementMap', { in: 'SourceGraphic', in2: 'noise', scale: f.scale, xChannelSelector: 'R', yChannelSelector: 'G' });
+      filter.appendChild(turb);
+      filter.appendChild(disp);
+      defs.appendChild(filter);
     });
 
-    islandsGroup.appendChild(g);
+    var grad = svgEl('radialGradient', { id: 'bg-gradient', cx: '50%', cy: '50%', r: '70%' });
+    var stop1 = svgEl('stop', { offset: '0%',   'stop-color': '#1e6390' });
+    var stop2 = svgEl('stop', { offset: '100%', 'stop-color': '#14405c' });
+    grad.appendChild(stop1);
+    grad.appendChild(stop2);
+    defs.appendChild(grad);
+    svg.appendChild(defs);
 
-    const labelBg = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    labelBg.setAttribute('class', 'island-label-bg');
-    labelBg.setAttribute('x', place.x);
-    labelBg.setAttribute('y', place.y + 22 * place.size + 12);
-    labelBg.textContent = place.title;
-    islandsGroup.appendChild(labelBg);
+    // Background rect
+    svg.appendChild(svgEl('rect', { width: '1200', height: '800', fill: 'url(#bg-gradient)' }));
 
-    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    label.setAttribute('class', 'island-label');
-    label.setAttribute('x', place.x);
-    label.setAttribute('y', place.y + 22 * place.size + 12);
-    label.textContent = place.title;
-    islandsGroup.appendChild(label);
+    // Islands group
+    var islandsGroup = svgEl('g', {});
+    svg.appendChild(islandsGroup);
 
-    g.addEventListener('mouseenter', () => {
-      tooltipName.textContent = place.title;
-      tooltipLocation.textContent = place.location;
-      tooltip.classList.add('visible');
+    const tooltipName = tooltip.querySelector('.place-name');
+    const tooltipLocation = tooltip.querySelector('.place-location');
+
+    archipelagoPlaces.forEach((place) => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute('class', 'island-group');
+      g.setAttribute('transform', 'translate(' + place.x + ', ' + place.y + ') scale(' + place.size + ')');
+      g.setAttribute('filter', 'url(#' + place.filter + ')');
+      g.dataset.id = place.id;
+
+      place.paths.forEach(d => {
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('fill', '#e8dfd0');
+        path.setAttribute('opacity', '0.88');
+        g.appendChild(path);
+      });
+
+      islandsGroup.appendChild(g);
+
+      const labelBg = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      labelBg.setAttribute('class', 'island-label-bg');
+      labelBg.setAttribute('x', place.x);
+      labelBg.setAttribute('y', place.y + 22 * place.size + 12);
+      labelBg.textContent = place.title;
+      islandsGroup.appendChild(labelBg);
+
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('class', 'island-label');
+      label.setAttribute('x', place.x);
+      label.setAttribute('y', place.y + 22 * place.size + 12);
+      label.textContent = place.title;
+      islandsGroup.appendChild(label);
+
+      g.addEventListener('mouseenter', () => {
+        tooltipName.textContent = place.title;
+        tooltipLocation.textContent = place.location;
+        tooltip.classList.add('visible');
+      });
+
+      g.addEventListener('mousemove', (e) => {
+        tooltip.style.left = (e.clientX + 16) + 'px';
+        tooltip.style.top = (e.clientY - 10) + 'px';
+      });
+
+      g.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+      });
+
+      g.addEventListener('click', () => {
+        if (place.url) {
+          if (window.top && window.top !== window) {
+            window.top.location.href = place.url;
+          } else {
+            window.location.href = place.url;
+          }
+        }
+      });
     });
 
-    g.addEventListener('mousemove', (e) => {
-      tooltip.style.left = (e.clientX + 16) + 'px';
-      tooltip.style.top = (e.clientY - 10) + 'px';
+    return true;
+  }
+
+  function startObserver() {
+    if (window[STATE_KEY]) return;
+
+    const observer = new MutationObserver(() => {
+      initMap();
     });
 
-    g.addEventListener('mouseleave', () => {
-      tooltip.classList.remove('visible');
-    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window[STATE_KEY] = observer;
+  }
 
-    g.addEventListener('click', () => {
-      if (place.url) window.location.href = place.url;
-    });
-  });
+  initMap();
+  startObserver();
 })();

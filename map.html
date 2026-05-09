@@ -2,11 +2,203 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/">
-<link rel="canonical" href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archipelago Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --app-height: 100vh;
+  }
+
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #14405c;
+  }
+
+  #map-hero {
+    position: relative;
+    width: 100%;
+    height: var(--app-height);
+    background: #14405c;
+    overflow: hidden;
+  }
+
+  #map-hero svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .island-group {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+  .island-group:hover {
+    opacity: 0.85;
+  }
+
+  .island-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 13px;
+    fill: #e8e0d0;
+    opacity: 0.85;
+    pointer-events: none;
+    text-anchor: middle;
+  }
+
+  .island-label-bg {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 13px;
+    fill: none;
+    stroke: #1a5276;
+    stroke-width: 3;
+    pointer-events: none;
+    text-anchor: middle;
+  }
+
+  .map-tooltip {
+    position: fixed;
+    background: rgba(10, 40, 60, 0.9);
+    border: 1px solid rgba(232, 224, 208, 0.3);
+    color: #e8e0d0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+    max-width: 250px;
+  }
+
+  .map-tooltip.visible { opacity: 1; }
+
+  .map-tooltip .place-name {
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .map-tooltip .place-location {
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+
+  .map-grain-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    opacity: 0.06;
+    z-index: 50;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+  }
+
+  .map-title-overlay {
+    position: absolute;
+    top: clamp(1rem, 3vw, 2rem);
+    left: clamp(1rem, 4vw, 3rem);
+    right: clamp(1rem, 4vw, 3rem);
+    z-index: 200;
+    pointer-events: none;
+  }
+
+  .map-title-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    color: #e8e0d0;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .map-title-overlay p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: rgba(232, 224, 208, 0.65);
+    margin: 0.5rem 0 0 0;
+    max-width: 20rem;
+  }
+
+  .map-scroll-hint {
+    position: absolute;
+    bottom: clamp(1rem, 2vw, 1.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    color: rgba(232, 224, 208, 0.4);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    text-align: center;
+    pointer-events: none;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  @media (max-width: 800px) {
+    .map-title-overlay {
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+    }
+
+    .map-title-overlay h1 {
+      font-size: clamp(2.1rem, 10vw, 3rem);
+      letter-spacing: 0.05em;
+    }
+
+    .map-title-overlay p {
+      font-size: 0.9rem;
+      max-width: 16rem;
+    }
+
+    .map-scroll-hint {
+      bottom: 1rem;
+      font-size: 0.72rem;
+    }
+  }
+</style>
 </head>
 <body>
-<p><a href="/">Redirecting to Archipelago…</a></p>
+  <div id="map-hero">
+    <div class="map-title-overlay">
+      <h1>Archipelago</h1>
+      <p>Mapping a regenerative, second renaissance culture</p>
+    </div>
+    <svg id="archipelago-map" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;"></svg>
+    <div class="map-grain-overlay"></div>
+    <div class="map-scroll-hint">scroll to explore &nbsp;↓</div>
+  </div>
+
+  <div class="map-tooltip" id="archipelago-tooltip">
+    <div class="place-name"></div>
+    <div class="place-location"></div>
+  </div>
+
+  <script src="/assets/archipelago-map.js" defer></script>
+  <script>
+    (function() {
+      function setAppHeight() {
+        document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+      }
+
+      window.addEventListener('resize', setAppHeight, { passive: true });
+      window.addEventListener('orientationchange', setAppHeight, { passive: true });
+      setAppHeight();
+    })();
+  </script>
 </body>
 </html>
